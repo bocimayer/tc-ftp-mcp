@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "tc-ftp-mcp"
+version = "0.1.0"
+description = "MCP server that connects to FTP servers using sessions saved in Total Commander (wcx_ftp.ini)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = ["mcp>=1.2"]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+tc-ftp-mcp = "tc_ftp_mcp.server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/tc_ftp_mcp"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
