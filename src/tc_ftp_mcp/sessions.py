@@ -27,7 +27,7 @@ class SessionError(Exception):
 
 @dataclass(frozen=True)
 class Session:
-    name: str  # full section name, e.g. "egedi|egedi calendar"
+    name: str  # full section name, e.g. "clients|example site"
     host: str
     port: int
     username: str

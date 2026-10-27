@@ -39,6 +39,10 @@ claude mcp add tc-ftp -- python -m tc_ftp_mcp --ini "D:\path\to\wcx_ftp.ini"
 
 The default ini location is `%APPDATA%\GHISLER\wcx_ftp.ini`.
 
+## Skill
+
+`skills/tc-ftp/SKILL.md` teaches an agent the workflow: find candidate sessions, let you pick one, verify it read-only, and only then work, asking before any change. Install it by copying the folder to `~/.claude/skills/`.
+
 ## Limits
 
 - Plain FTP and explicit FTPS (sessions with `ftps://` or `ssl=1`). SFTP sessions use a different Total Commander plugin and storage; not covered.
